@@ -1,6 +1,6 @@
 user: admin
 mail: admin@gmail.com
-pass: nghiaka1
+pass: 123456
 
 cai dat 
 
