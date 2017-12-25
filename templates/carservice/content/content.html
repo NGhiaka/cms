@@ -1,0 +1,44 @@
+{% extends 'carservice/content/template.html' %}
+
+{% block title %} Nội dung trang web {% endblock %}
+
+
+{% block navibase %}
+    <li>
+        <i class="fa fa-dashboard"></i> Quản lý nội dunb web</a>
+    </li>
+    <li class="active">
+        <i class="fa fa-table"></i> chi tiết
+    </li>
+{% endblock %}
+                
+{% block contain %}
+    <div class="panel panel-primary">
+        <div class="panel-heading"> Thông tin</div>
+        <div class="panel-body">
+        	{% if object_list%}
+				{% for content in object_list %}
+				    <div class="col-xs-4 col-md-4">
+                        <img src="{{ content.avatar.url }}" class="img-thumbnail img-responsive" >         
+                    </div>
+                    <div class="col-xs-8 col-md-8">
+                        <strong>{{ content.title }}</strong></p>
+                        <p>Số điện thoại: <strong>{{ content.phone }}</strong></p>
+                        <p>Email: <strong>{{ content.email }}</strong></p>
+                        <p>Địa chỉ: <strong>{{ content.address }} năm</strong></p>  
+                        <p>Liên kết: <strong>{{ content.link }}</strong></p>        
+                    </div>
+                    <div class="col-xs-12 col-md-12 ">{{ content.summary }}</div>
+			    	<a href="{% url 'carservice:content_edit' content.id%}"> Sửa nội dung</a>
+			    {% endfor %}
+			    
+			{% else %}
+				<a href="{% url 'carservice:content_new' %}"> Thêm nội dung</a>
+			{% endif%}
+                     
+        </div>
+    </div>
+{% endblock %}
+
+
+

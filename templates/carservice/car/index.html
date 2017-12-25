@@ -1,0 +1,58 @@
+{% extends 'carservice/car/template.html' %}
+
+{% block title %}Quản lý xe{% endblock %}
+
+
+{% block navibase %}
+    <li>
+        <i class="fa fa-dashboard"></i> Xe</a>
+    </li>
+    <li class="active">
+        <i class="fa fa-table"></i> Hiển thị
+    </li>
+{% endblock %}
+                
+{% block contain %}
+    <div class="panel panel-primary">
+        <div class="panel-heading">Danh sách các xe của dịch vụ du lịch <strong>Phước Nhân</strong></div>
+        <div class="panel-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr class="bg-primary">
+                        <th>STT</th>
+                        <th>Biển số xe</th>
+                        <th>Tên xe</th>
+                        <th>Chủ sở hữu</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%  if object_list %}
+                        {%  for car in object_list %}
+                            <tr>
+                                <th>{{ car.id }}</th>
+                                <th>{{ car.carid}}</th>
+                                <th>{{ car.nameofcar}}</th>
+                                <th>{{ car.owner}}</th>
+                                <th style="text-align: center;">
+
+                                    <a href="{% url 'carservice:car_detail' car.id%}" alt="Xem chi tiết"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></a>
+
+                                    <a href="{% url 'carservice:car_edit' car.id%}" alt="Chỉnh sửa thông tint"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+
+                                    <a href="{% url 'carservice:car_delete' car.id%}" alt="Xóa"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                                </th>
+                            </tr>
+                        {%  endfor %}
+                        
+                    {%  endif%}
+                   
+                </tbody>
+            </table>    
+            
+            
+        </div>
+    </div>
+    <a href="{% url 'carservice:car_new'%}">Thêm xe +</a>
+{% endblock %}
+

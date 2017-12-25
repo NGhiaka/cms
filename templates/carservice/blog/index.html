@@ -1,0 +1,56 @@
+{% extends 'carservice/blog/template.html' %}
+
+{% block title %}Quản lý blog {% endblock %}
+
+
+{% block navibase %}
+    <li>
+        <i class="fa fa-dashboard"></i> Blog</a>
+    </li>
+    <li class="active">
+        <i class="fa fa-table"></i> Hiển thị
+    </li>
+{% endblock %}
+                
+{% block contain %}
+    <div class="panel panel-primary">
+        <div class="panel-heading"> Danh sách các bài blog</strong></div>
+        <div class="panel-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr class="bg-primary">
+                        <th>STT</th>
+                        <th>Tiêu đề</th>
+                        <th>Ngày đăng</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%  if object_list %}
+                        {%  for blog in object_list %}
+                            <tr>
+                                <a href="{% url 'carservice:blog_detail' blog.id%}" alt="Xem chi tiết">
+                                <th>{{ blog.id }}</th>
+                                <th>{{ blog.title}}</th>
+                                <th>{{ blog.dateSubmit}}</th>
+                                </a>
+                                <th style="text-align: center;">
+
+                                    <a href="{% url 'carservice:blog_edit' blog.id%}" alt="Chỉnh sửa thông tint"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+
+                                    <a href="{% url 'carservice:blog_delete' blog.id%}" alt="Xóa"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                                </th>
+                            </tr>
+                        {%  endfor %}
+                        
+                    {%  endif%}
+                   
+                </tbody>
+            </table>    
+            
+            
+        </div>
+    </div>
+    <a href="{% url 'carservice:car_new'%}">Thêm xe +</a>
+{% endblock %}
+

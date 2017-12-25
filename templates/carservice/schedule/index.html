@@ -1,0 +1,65 @@
+{% extends 'carservice/schedule/template.html' %}
+
+{% block title %}Quản lý xe{% endblock %}
+
+
+{% block navibase %}
+    <li>
+        <i class="fa fa-dashboard"></i> Lịch trình</a>
+    </li>
+    <li class="active">
+        <i class="fa fa-table"></i> Xem lịch trình
+    </li>
+{% endblock %}
+                
+{% block contain %}
+    <div class="panel panel-primary filterable">
+        <div class="panel-heading">
+            Danh sách các lịch trình của dịch vụ du lịch <strong>Phước Nhân</strong>
+            <div class="pull-right">
+                <button class="btn btn-default btn-xs btn-filter"><i class="fa fa-filter" aria-hidden="true"></i> Tìm kiếm</button>
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr class="bg-primary filters">
+                        <th><input type="text" class="form-control" placeholder="STT" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Tên khách hàng" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Số điện thoại" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Ngày đi" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Điểm đến" disabled></th>
+    
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%  if object_list %}
+                        {%  for sch in object_list %}
+                            <tr>
+                                <th>{{ sch.id }}</th>
+                                <th>{{ sch.guess_name}}</th>
+                                <th>{{ sch.phone_number}}</th>
+                                <th>{{ sch.departure_day|date:'d/m/Y'}}</th>
+                                <th>{{ sch.destination}}</th>
+
+                                <th style="text-align: center;">
+                                    <a href="chitiet/{{sch.id}}" alt="Xem chi tiết"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></a>
+
+                                    <a href="capnhat/{{sch.id}}" alt="Chỉnh sửa thông tint"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+
+                                    <a href="xoa/{{sch.id}}" alt="Xóa"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                                </th>
+                            </tr>
+                        {%  endfor %}
+                    {%  endif%}
+                    
+                </tbody>
+            </table>    
+            
+            <div id="test" data-list="{{car_list}}"></div>
+        </div>
+    </div>
+    <a href="{% url 'carservice:schedule_choose_car'%}">Thêm lịch +</a>
+{% endblock %}
+

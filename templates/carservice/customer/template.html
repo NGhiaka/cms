@@ -1,0 +1,79 @@
+{% extends 'carservice/template/template.html' %}
+
+{% block title %}{% endblock %}
+{% block menu %}
+	<li>
+        <a href="{% url 'carservice:index' %}"><i class="fa fa-fw fa-dashboard"></i> Trang chủ</a>
+    </li>
+    <li>
+        <a href="{% url 'carservice:car' %}"><i class="fa fa-car" aria-hidden="true"></i> Quản lý xe</a>
+    </li>
+    <li>
+        <a href="{% url 'carservice:schedule' %}"><i class="fa fa-calendar"></i> Lịch trình</a>
+    </li>
+    <li>
+        <a href="{% url 'carservice:statistical_car' %}"> <i class="fa fa-area-chart" aria-hidden="true"></i>
+ Dịch vụ xe</a>
+    </li>
+    <li>
+        <a href="{% url 'carservice:statistical_income' %}"><i class="fa fa-bar-chart" aria-hidden="true"></i>
+ Chi phí</a>
+    </li>
+    <li>
+        <a href="{% url 'carservice:driver' %}"><i class="fa fa-male fa-lg" aria-hidden="true"></i> Quản lý tài xế</a>
+    </li>
+    
+    <li  class="">
+        <a href="{% url 'carservice:album' %}"><i class="fa fa-camera" aria-hidden="true"></i> Quản lý ảnh</a>
+    </li>
+    <li  class="">
+        <a href="{% url 'carservice:content' %}"><i class="fa fa-th-list" aria-hidden="true"></i> Nội dung web</a>
+    </li>
+
+    <li  class="active">
+        <a href="{% url 'carservice:customer' %}"><i class="fa fa-user-md" aria-hidden="true"></i> Khách hàng</a>
+    </li>
+
+    <li  class="">
+        <a href="{% url 'carservice:blog' %}"><i class="fa fa-file-text" aria-hidden="true"></i> Bài blog</a>
+    </li>
+{% endblock %}
+                    
+{% block contenter %}
+
+	<!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Tài xế
+            </h1>
+            <ol class="breadcrumb">
+                {% block navibase %}
+
+                {% endblock %}
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-info alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <i class="fa fa-info-circle"></i>  Quản lý khách hàng
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            {% block contain %}
+
+            {% endblock %}
+
+        </div>
+    </div>
+    
+    <!-- /.row -->
+
+{% endblock %}

@@ -1,0 +1,687 @@
+{% extends 'frontend/template.html' %}
+
+{% block title %} Blog | Dịch vụ thuê xe du lịch Phước Nhân {% endblock %}
+
+{% block content %}
+	<header class="page-header nevy-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">                
+                    <h2 class="page-title">Blog</h2>
+                    <p class="page-description yellow-color">Các bài blog</p>        
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row-->
+        </div><!-- /.container-fluid -->           
+    
+	</header>
+
+
+	<div class="blog-block bg-gray-color">
+       <div class="container">
+           <div class="row">
+                <div class="col-md-12">
+                    <div class="post-filter-block clearfix">
+                        <div class="post-filter-area clearfix">
+                            <ul class="nav nav-tabs hidden-sm hidden-xs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab"><span>Recent</span>/<span>News</span></a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Popular</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Trending</a>
+                                </li>
+                            </ul>
+                        <select class="responsive-nav visible-xs-block visible-sm-block"><option value="0">Recent/News</option><option value="1">Popular</option><option value="2">Trending</option></select></div> <!-- /.tab-list -->
+                    </div><!-- /.post-filter-block -->
+
+                   <div class="blog-content-left">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-three.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+                                    
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-two.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 --> 
+                                    
+                                    <!-- <div class="clearfix"></div> /.clearfix -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-one.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 --> 
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-two.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <!-- <div class="clearfix"></div> /.clearfix -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-three.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 --> 
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-one.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+                                    
+                                </div><!-- /.row -->
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="pagination-link">
+                                            <ul class="pagination">
+                                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                                <li class="active"><a href="#">01</a></li>
+                                                <li><a href="#">02</a></li>
+                                                <li><a href="#">03</a></li>
+                                                <li><a href="#">04</a></li>
+                                                <li><a href="#">05</a></li>
+                                                <li><span class="pages-number-dots">...</span></li>
+                                                <li><a href="#">12</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                            </ul>
+                                        </div><!-- /.pagination -->
+                                    </div><!-- /.col-md-12 -->
+                                </div><!-- /.row -->
+                            </div> <!-- /.home -->
+                              
+                            <div role="tabpanel" class="tab-pane fade" id="profile">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-two.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-one.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="clearfix"></div><!-- /.clearfix -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-two.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-three.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="clearfix"></div><!-- /.clearfix -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-one.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-three.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                </div><!-- /.row -->
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="pagination-link">
+                                            <ul class="pagination">
+                                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                                <li class="active"><a href="#">01</a></li>
+                                                <li><a href="#">02</a></li>
+                                                <li><a href="#">03</a></li>
+                                                <li><a href="#">04</a></li>
+                                                <li><a href="#">05</a></li>
+                                                <li><span class="pages-number-dots">...</span></li>
+                                                <li><a href="#">12</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                            </ul>
+                                        </div><!-- /.pagination -->
+                                    </div><!-- /.col-md-12 -->
+                                </div><!-- /.row -->
+                            </div> <!-- /.profile -->
+                            
+                            <div role="tabpanel" class="tab-pane fade" id="messages">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-three.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-two.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="clearfix"></div><!-- /.clearfix -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-three.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-one.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="clearfix"></div><!-- /.clearfix -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-two.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <article class="post">
+                                            <figure class="post-thumb">
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog-one.png" alt="blog">
+                                                </a>
+                                            </figure><!-- /.post-thumb -->
+                                            <div class="post-content">  
+                                                <div class="entry-meta">
+                                                    <span class="entry-date nevy-bg">
+                                                        July 25, 2016
+                                                    </span>
+                                                    <span class="entry-author red-bg">
+                                                        <i class="fa fa-user"></i>
+                                                        Dr. Sibbir.
+                                                    </span>
+                                                </div><!-- /.entry-meta -->
+                                                <h2 class="entry-title">
+                                                    <a href="#">Get the best price of taxi in your Town.</a>
+                                                </h2><!-- /.entry-title -->
+                                                <div class="entry-footer">
+                                                    <div class="entry-footer-meta">
+                                                        <span class="entry-view"><i class="fa fa-eye"></i>35</span>
+                                                        <span class="entry-like"><a href="#"><i class="fa fa-heart-o"></i>09</a></span>
+                                                        <span class="entry-comments"><a href="#"><i class="fa fa-comments"></i>05</a></span>
+                                                    </div><!-- /.entry-footer-meta -->
+                                                </div><!-- /.entry-footer -->
+                                            </div><!-- /.post-content -->
+                                        </article><!-- /.post -->
+                                    </div><!-- /.col-md-6 -->
+                                    
+                                </div><!-- /.row -->
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="pagination-link">
+                                            <ul class="pagination">
+                                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                                <li class="active"><a href="#">01</a></li>
+                                                <li><a href="#">02</a></li>
+                                                <li><a href="#">03</a></li>
+                                                <li><a href="#">04</a></li>
+                                                <li><a href="#">05</a></li>
+                                                <li><span class="pages-number-dots">...</span></li>
+                                                <li><a href="#">12</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                            </ul>
+                                        </div><!-- /.pagination -->
+                                    </div><!-- /.col-md-12 -->
+                                </div><!-- /.row -->
+                            </div> <!-- /.messages -->
+                        </div> <!-- /.tab-content -->
+                   </div><!-- /.blog-content-left -->
+                </div><!-- /.col-md-8 -->
+
+                
+           </div><!-- /.row -->
+       </div><!-- /.container -->
+   </div>
+{% endblock %}

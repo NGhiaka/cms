@@ -1,0 +1,248 @@
+{% extends 'carservice/template/template.html' %}
+{% load staticfiles%}
+{% block title %}Trang chủ{% endblock %}
+{% block menu %}
+	<li class="active">
+        <a href="{% url 'carservice:index' %}"><i class="fa fa-fw fa-dashboard"></i> Trang chủ</a>
+    </li>
+    <li>
+    	<a href="{% url 'carservice:car' %}"><i class="fa fa-car" aria-hidden="true"></i> Quản lý xe</a>
+    </li>
+    <li>
+        <a href="{% url 'carservice:schedule' %}"><i class="fa fa-calendar"></i> Lịch trình</a>
+    </li>
+    <li>
+        <a href="{% url 'carservice:statistical_car' %}"> <i class="fa fa-area-chart" aria-hidden="true"></i>
+ Dịch vụ xe</a>
+    </li>
+    <li>
+        <a href="{% url 'carservice:statistical_income' %}"><i class="fa fa-bar-chart" aria-hidden="true"></i>
+ Chi phí</a>
+    </li>
+    <li>
+        <a href="{% url 'carservice:driver' %}"><i class="fa fa-male" aria-hidden="true"></i> Quản lý tài xế</a>
+    </li>
+    
+    <li>
+        <a href="{% url 'carservice:album' %}"><i class="fa fa-camera" aria-hidden="true"></i> Quản lý ảnh</a>
+    </li>
+    <li  class="">
+        <a href="{% url 'carservice:content' %}"><i class="fa fa-th-list" aria-hidden="true"></i> Nội dung web</a>
+    </li>
+
+    <li  class="">
+        <a href="{% url 'carservice:customer' %}"><i class="fa fa-user-md" aria-hidden="true"></i> Khách hàng</a>
+    </li>
+
+    <li  class="">
+        <a href="{% url 'carservice:blog' %}"><i class="fa fa-file-text" aria-hidden="true"></i> Bài blog</a>
+    </li>
+{% endblock %}
+
+{% block scripts %}
+    
+    <link href="{% static 'css/fullcalendar/fullcalendar.min.css' %}" rel="stylesheet">
+    
+    <link href="{% static 'css/jquery_datetimepicker.css' %}" rel="stylesheet">
+    <script src="{% static 'js/build/jquery.datetimepicker.full.js' %}"></script>
+
+    <script src="{% static 'js/fullcalendar/moment.min.js' %}"></script>
+    <script src="{% static 'js/fullcalendar/fullcalendar.min.js' %}"></script>
+
+    <script src="{% static 'js/fullcalendar/theme-chooser.js' %}"></script>
+    <script src="{% static 'js/fullcalendar/locale-all.js' %}"></script>
+    <script src="{% static 'js/zabuto_calendar.js' %}"></script>
+    <script>
+        
+        
+
+        $(window).load(function(){
+            var scl = {{ forms|safe }};
+            var initialLocaleCode = 'vi';
+            initThemeChooser({
+                init: function(themeSystem) {
+                    $('#calendar').fullCalendar({
+                        themeSystem: themeSystem,
+                        header: {
+                            left: 'prev,next today',
+                            center: 'title',
+                            right: 'month,agendaWeek,agendaDay,listMonth'
+                        },
+                        locale: initialLocaleCode,
+                        defaultDate: new Date(),
+                        weekNumbers: true,
+                        navLinks: true, // can click day/week names to navigate views
+                        editable: true,
+                        eventLimit: true, // allow "more" link when too many events
+                        events: scl,
+                    });
+                },
+
+                change: function(themeSystem) {
+                    $('#calendar').fullCalendar('option', 'themeSystem', themeSystem);
+                }
+
+            });
+
+
+            
+        });
+    </script>
+   
+   
+{% endblock %}
+                    
+{% block contenter %}
+
+    <style>
+
+        .cal {
+            margin: 0;
+            padding: 0;
+            font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+            font-size: 14px;
+        }
+
+        #top-cal {
+            /*background: #eee;*/
+            border-bottom: 1px solid #ddd;
+            padding: 0 10px;
+            line-height: 40px;
+            font-size: 12px;
+        }
+
+        #calendar {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 10px;
+        }
+        .car-schedule{
+            padding: 10px;
+        }
+        p{
+            margin: 0px;
+        }
+
+        
+        .car-move{
+            padding: 5px;
+            display: inline-flex;
+            width: 100%;
+            position: relative;
+        }
+        #calendar.fc-unthemed {
+            font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+        }
+        .car-move > .car-icon{
+
+            position: relative;
+            -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+            -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+            animation: mymove 7s infinite;
+            animation-delay: 2s;
+
+        }
+        /*.fc button, .fc-button-group{
+            display: block;
+        }*/
+        .car-move > .car-icon > img{
+            height: 20px;
+        }
+        @-webkit-keyframes mymove {
+            from {left: 0px;}
+            to {left: 50%;}
+        }
+
+        @keyframes mymove {
+            from {left: 0px;}
+            to {left: 50%;}
+        }
+        .car-destination{
+            position: absolute;
+            right: 0%;
+            text-align: left; 
+        }
+    </style>
+    <div class="cal">
+        
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Lịch hôm nay
+            </div>
+            <div class="panel-body">
+                <div>
+                    {%  if schedules %}
+                        {%  for sch in schedules %}
+                            <p><strong>{{ sch.car }}:</strong></p>
+                            <div class="car-move">
+                                <div class="car-start">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    {{ sch.departure }} ({{ sch.departure_day|date:'d/m/Y' }}) -> 
+                                </div>
+                                <div class="car-icon"><img src="{{ sch.car.avatar.url }}"></div>
+                                <div class="car-destination"> 
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    {{ sch.destination }} ({{ sch.destination_day|date:'d/m/Y'}})
+                                </div>
+                            </div>
+                        {%  endfor %}
+                    {%  else %}
+                        <div class="car-move"><div class="alert alert-success" role="alert">Lịch hôm nay trống</div></div>
+                    {%  endif%}
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-primary">    
+            <div id='top-cal'>
+                <div id='theme-system-selector' class='selector'>
+                    Giao diện hệ thống:
+
+                    <select>
+                        <option value='jquery-ui' selected>jQuery UI</option>
+                        <option value='standard'>unthemed</option>
+                    </select>
+                </div>
+
+                <div data-theme-system="jquery-ui" class='selector' style='display:none'>
+                    Tên giao diện:
+
+                    <select>
+                        <option value='black-tie'>Black Tie</option>
+                        <option value='blitzer'>Blitzer</option>
+                        <option value='cupertino' >Cupertino</option>
+                        <option value='dark-hive'>Dark Hive</option>
+                        <option value='dot-luv'>Dot Luv</option>
+                        <option value='eggplant'>Eggplant</option>
+                        <option value='excite-bike'>Excite Bike</option>
+                        <option value='flick'>Flick</option>
+                        <option value='hot-sneaks' selected>Hot Sneaks</option>
+                        <option value='humanity'>Humanity</option>
+                        <option value='le-frog'>Le Frog</option>
+                        <option value='mint-choc'>Mint Choc</option>
+                        <option value='overcast'>Overcast</option>
+                        <option value='pepper-grinder'>Pepper Grinder</option>
+                        <option value='redmond'>Redmond</option>
+                        <option value='smoothness'>Smoothness</option>
+                        <option value='south-street'>South Street</option>
+                        <option value='start'>Start</option>
+                        <option value='sunny'>Sunny</option>
+                        <option value='swanky-purse'>Swanky Purse</option>
+                        <option value='trontastic'>Trontastic</option>
+                        <option value='ui-darkness'>UI Darkness</option>
+                        <option value='ui-lightness'>UI Lightness</option>
+                        <option value='vader'>Vader</option>
+                    </select>
+                </div>
+
+                <span id='loading' style='display:none'>loading theme...</span>
+                 <a href="{% url 'carservice:schedule_choose_car'%}">Thêm lịch +</a>
+            </div>
+            <input type="hidden" name="name" id="name" class="form-control" value="{{ forms }}" readonly="readonly">
+            <div id='calendar'></div>
+        </div>
+
+    </div>
+
+{% endblock %}
